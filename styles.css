@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    background-color: #fcfcfa;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+.slot {
+    width: 100px;
+    height: 100px;
+    background: #a5c3cf; /* 7aa3e2 a5c3cf */
+
+    padding: 10px;
+}
+.hole {
+    width: 80px;
+    height: 80px;
+    background: #fcfcfa;
+    border-radius: 50%;
+}
+.slot.player1 .hole {
+    background: #ffbebd;
+}
+.slot.player2 .hole {
+    background: #1a405f;
+}
+#heading {
+    font-family: "Helvetica Neue";
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 3px;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2rem;
+}
+#board {
+    display: flex;
+    position: absolute;
+    transform: translateX(-50%); /* affects object */
+    left: 50%; /* affects relationship to parent */
+    margin-top: 6rem;
+    cursor: pointer;
+    /* padding-top: 3rem; */
+}
+.popup {
+    justify-content: center;
+    align-items: center;
+    background: #fcfcfa;
+
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 35rem;
+    height: 10rem;
+    z-index: 999;
+    display: none;
+}
+#button a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+.playagain {
+    padding-right: 2rem;
+    font-family: "Helvetica Neue";
+    font-size: 30px;
+    font-weight: 200;
+}
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+}
+.overlay.on {
+    background-color: rgba(0, 0, 0, 0.5);
+    transition-property: all;
+    transition-duration: 1s;
+}
+#scores {
+    position: absolute;
+    transform: translateX(-50%); /* affects object */
+    left: 10%; /* affects relationship to parent */
+    top: 10rem;
+    width: 20%;
+    /* margin: 0 auto; */
+    padding-top: 2rem;
+    padding-right: 4rem;
+    text-align: center;
+}
+#player1Title {
+    color: #ffbebd;
+}
+#player2Title {
+    color: #1a405f;
+}
+#player1Title,
+#player2Title {
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+    font-size: 25px;
+}
+#player1Score,
+#player2Score {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 23px;
+    border: 1px solid #b3b3b3;
+    color: #333333;
+    height: 50px;
+    width: 50px;
+    display: inline-block;
+    line-height: 50px; /* TRICK: only works with one line text in div. Set it the same as height */
+    margin-bottom: 1rem;
+}
+#resetScore {
+    margin-top: 1rem;
+}
+
+.semi {
+    opacity: 0.5;
+}
